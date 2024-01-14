@@ -1,3 +1,59 @@
-.navlinks {
-  display: flexbox;
+body {
+  background-color: rgb(223, 223, 223);
+}
+
+@media (min-width: 1000px) {
+  header {
+    padding: 0 20% 0 20%;
+  }
+}
+
+.headerLogo {
+  text-align: center;
+}
+
+.headerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.headerNav > a {
+  text-decoration: none;
+}
+
+.headerContact {
+  text-align: center;
+}
+
+.headerContact > a {
+  text-decoration: none;
+}
+
+.floatingNav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+  
+}
+
+@media (min-width: 1000px) {
+  .mainContent {
+    padding: 0 20% 0 20%;
+  }
+}
+
+.mainContent > h1 {
+  text-align: center;
+  margin: 60px 0 60px 0;
+}
+
+.blogPost {
+  padding: 10px 0 10px 0;
 }
