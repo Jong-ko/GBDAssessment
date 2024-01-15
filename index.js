@@ -1,4 +1,4 @@
-console.log('boop')
+// console.log('boop')
 
 // window.addEventListener('scroll', function() {
 //   let floatingNav = document.getElementById('floatingNav');
@@ -11,22 +11,21 @@ console.log('boop')
 //   }
 // });
 
-
-// Function to handle the intersection observer callback
+// logic for what is triggered
 function handleIntersection(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log(`remove`)
+      // console.log(`remove`)
       document.getElementById('floatingNav').classList.remove('show');
     } else {
-      console.log(`show`)
+      // console.log(`show`)
       document.getElementById('floatingNav').classList.add('show');
     }
   });
 }
 
-// Create an intersection observer
+// instantiates IntersectionOberserver and sets threshold
 let observer = new IntersectionObserver(handleIntersection, { threshold: 0 });
 
-// Observe the content element
+// sets headerNav to be observed
 observer.observe(document.getElementById('headerNav'));
