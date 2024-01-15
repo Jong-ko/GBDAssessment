@@ -4,8 +4,17 @@ body {
 
 @media (min-width: 1000px) {
   header {
-    padding: 0 20% 0 20%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 10% 0 10%;
   }
+  .headerNav {
+    align-items: center;
+  }
+}
+
+header {
+  border-bottom: 1px solid rgb(180, 180, 180);
 }
 
 .headerLogo {
@@ -18,40 +27,45 @@ body {
   justify-content: space-around;
 }
 
-.headerNav > a {
+a {
   text-decoration: none;
+  color: black;
 }
 
 .headerContact {
   text-align: center;
 }
 
-.headerContact > a {
-  text-decoration: none;
-}
-
 .floatingNav {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    top: 10;
-    right: -300px;
-    /* width: 250px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  top: 50px;
+  right: -300px;
+  transition: right 0.5s;
+  transition-timing-function: ease-out
+  /* width: 250px;
     height: 100px; */
 }
 
-.floatingNav>a {
-  text-decoration: none;
+.floatingNav > a {
+  background-color: aliceblue;
+  padding: 5px 15px 5px 15px;
+  margin: 5px 0 5px 0;
+  border-radius: 50px;
+  text-align: center;
+  transition: all .5s;
 }
 
-.show {
-  right: 10px;
+.floatingNav >a:hover {
+  background-color: grey;
+  transform: scale(1.1);
 }
 
 @media (min-width: 1000px) {
-  .mainContent {
-    padding: 0 20% 0 20%;
+  .show {
+    right: 10px;
   }
 }
 
@@ -60,6 +74,12 @@ body {
   margin: 60px 0 60px 0;
 }
 
+@media (min-width: 1000px) {
+  .mainContent {
+    padding: 0 20% 0 20%;
+  }
+}
+
 .blogPost {
-  padding: 10px 0 10px 0;
+  padding: 10px 20px 10px 20px;
 }
