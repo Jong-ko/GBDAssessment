@@ -13,15 +13,28 @@ header {
 }
 
 .headerLogo {
-  text-align: center;
+  text-align: left;
 }
 
-.headerNav > ul {
+.menu-toggle {
+  /* position: absolute; */
+  float: right;
+  cursor: pointer;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-left: 0px;
-  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.hamburgerBar {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(94, 94, 94);
+  transition: 0.3s;
+}
+
+.headerNav {
+  display: none;
 }
 
 a {
@@ -35,6 +48,22 @@ a {
 }
 
 @media (min-width: 768px) {
+  .headerLogo {
+    text-align: center;
+  }
+  .headerNav {
+    display: block;
+  }
+  .headerNav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 0px;
+    list-style: none;
+  }
+  .hamburgerBar {
+    display: none;
+  }
   header {
     display: flex;
     flex-direction: row;
@@ -90,7 +119,7 @@ a {
 }
 
 @media (min-width: 768px) {
-  .show {
+  .floatingNav .show {
     right: 10px;
   }
 }

@@ -1,15 +1,7 @@
-// console.log('boop')
-
-// window.addEventListener('scroll', function() {
-//   let floatingNav = document.getElementById('floatingNav');
-//   if (window.scrollY > 110) {
-//     console.log(`show`)
-//     floatingNav.classList.add('show');
-//   } else {
-//     console.log('remove')
-//     floatingNav.classList.remove('show');
-//   }
-// });
+// Hamburger icon logic
+document.getElementById("mobile-menu").addEventListener("click", function () {
+  document.getElementById("headerNav").classList.toggle("show");
+});
 
 // logic for what is triggered
 function handleIntersection(entries, observer) {
