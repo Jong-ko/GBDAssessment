@@ -1,25 +1,9 @@
 body {
   background-color: rgb(238, 238, 238);
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: row;
-    padding: 0 10% 0 10%;
-    align-items: center;
-  }
-  li>a {
-    margin: 0px 0px 0px 30px;
-  }
-  .headerContact {
-    flex-grow: 2;
-  }
-  .headerContact>a {
-    text-align: end;
-  }
-}
+/* HEADER AND NAVIGATION STYLING */
 
 header {
   border-bottom: 1px solid rgb(180, 180, 180);
@@ -47,6 +31,24 @@ a {
   margin: 15px;
 }
 
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10% 0 10%;
+    align-items: center;
+  }
+  li > a {
+    margin: 0px 0px 0px 30px;
+  }
+  .headerContact {
+    flex-grow: 2;
+    text-align: end;
+  }
+}
+
+/* FLOATING NAVIGATION STYLING */
+
 .floatingNav {
   position: fixed;
   display: flex;
@@ -67,6 +69,11 @@ a {
   transition: all 0.5s;
 }
 
+#floatingContactUs {
+  flex-grow: 2;
+  margin-top: 30px;
+}
+
 .floatingNav > a:hover {
   background-color: rgb(175, 173, 173);
   transform: scale(1.1);
@@ -77,6 +84,8 @@ a {
     right: 10px;
   }
 }
+
+/* MAIN BODY STYLING */
 
 .mainContent > h1 {
   text-align: center;
@@ -89,19 +98,56 @@ a {
   }
 }
 
+/* BLOG POST CONTAINER STYLING */
+
 .blogPost {
-  padding: 10px 20px 10px 20px;
+  padding: 10px;
   display: flex;
+  align-items: center;
 }
 
-.blogPost>div>h4 {
-  margin: 0px
+.blogPost > img {
+  align-self: center;
 }
 
-.blogPost>div>p{
+.blogContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+
+.blogTitle {
+  margin: 0px;
+  font-size: 22px;
+}
+
+.blogCaption {
   margin: 0px;
 }
 
-.blogPost>a {
+.blogReadMore {
+  flex-grow: 2;
+  text-align: end;
+  text-decoration: underline;
+}
+
+/* FOOTER STYLING */
+
+.footerContent {
+  display: flex;
+  flex: row;
+  justify-content: center;
   align-items: center;
+  /* position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center; */
+}
+
+.footerContent>ul>li {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
 }
