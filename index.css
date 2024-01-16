@@ -1,6 +1,9 @@
 body {
   background-color: rgb(238, 238, 238);
   font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* HEADER AND NAVIGATION STYLING */
@@ -40,6 +43,13 @@ a {
   }
   li > a {
     margin: 0px 0px 0px 30px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+  li > a:hover {
+    background-color: rgb(175, 173, 173);
+    /* transform: scale(1.1); */
   }
   .headerContact {
     flex-grow: 2;
@@ -86,6 +96,10 @@ a {
 }
 
 /* MAIN BODY STYLING */
+
+.mainContent {
+  flex: 1;
+}
 
 .mainContent > h1 {
   text-align: center;
@@ -139,14 +153,13 @@ a {
   flex: row;
   justify-content: center;
   align-items: center;
-  /* position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center; */
 }
 
-.footerContent>ul>li {
+.footerLinks {
+  margin: 0px;
+}
+
+.footerLinks > li {
   display: flex;
   flex-direction: row;
   text-decoration: none;
